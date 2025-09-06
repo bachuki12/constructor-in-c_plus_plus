@@ -17,7 +17,7 @@ public:
 	void set_janr(string);
 	void set_pages(int);
 
-	// Get book details
+	// Set book details
 	void get_title();
 	void get_author();
 	void get_janr();
@@ -93,24 +93,23 @@ void books::display_books_details() {
 }
 
 
-void books::take_input() {
+
+int main()
+{
 	string title, author, janr;
 	int page;
+
 	cout << "Enter title of the book -> ";
 	cin >> title;
 	cout << "Enter author of the book -> ";
 	cin >> author;
-	cout << "Enter janr of the book -> ";
+	cout << "Enter ganre of the book -> ";
 	cin >> janr;
 	cout << "Enter pages of the book -> ";
 	cin >> page;
-}
 
-
-int main()
-{
 	books book1;
-	book1.book_details();
+	book1.book_details(title, author, janr,	page);
 	book1.display_books_details();
 
 	//book1.set_author("J.K.Rowling");
